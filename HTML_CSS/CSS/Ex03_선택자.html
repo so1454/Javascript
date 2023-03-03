@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         
+            /* 1. 전체 선택자(*) : 전체 색을 바꾸겠다.  */
+           
+        
+
+        /*h2의 색을 바꾸겠다.*/
+        /* h2{ 
+            color : blue;
+        } */
+    
+         /*3. 클래스 선택자(.클래스 이름) - 여러명 */
+         /* Java 수업을 들어온 선생님만 글자 배경색을 살색으로 변경 */
+        /* .java{
+            background-color : blanchedalmond;
+        } */
+
+         /*4. 아이디 선택자(#아이디 이름) - 단 한명 (나중에 여러명 지정하면 다른 프로그램에서 오류남*/
+         /* database 수업을 들어온 선생님만 글자 배경색을 노랑색으로 변경 */
+        /* #db{
+            background-color: yellow;
+        }
+        #html{
+            background-color : grey;
+        } */
+
+        /* 성별이 여자인 선생님들만 글씨두께를 bold로 지정*/
+       
+
+
+
+        /*5. 그룹선택자(선택자, 선택자)*/
+        /* class명이 java이고, f인 선생님들에게 글씨 크기를 100px로 변경*/
+        /*.java{
+            font-size: 30px;
+        }
+        .f{
+            font-size: 30px ;
+        }*/
+        /*위 처럼 같은 아이들인데 클래스가 다른 사황에서 둘다에게 한번에 주려면*/
+        /* .java,.f{
+            font-size: 30px;
+
+        } */
+        /* 6. 결합(계층) 선택자 : 자식, 자손, 일반 
+            : 자식, 자손, 일반동위(형제), 인접 동위(인접 형제)
+            : >, 띄어쓰기, ~, + 
+            : 기준선택자 계층선택자 기호변경할선택자
+            */
+        
+        /* 6-1. body를 기준으로 해서 모든 li 요소의 글자크기를 40px로 변경 */
+        /* body li{
+            font-size: 40px;
+        } */
+        /* 6-2. 첫번째 li를 기준으로해서 class 명이 f인 요소의 글자색를 green로 변경 */
+        li~.f{
+            color: green;
+        }
+
+        /* 6-3. li 중에서 class가 java인 요소만 배경색을 gray로 변경 */
+        /* li.java <-- li중에서 class 명이 java인 요소만 선택한다는 의미 */
+        li.java{
+            background-color: gray;
+
+        }
+        
+
+
+    </style>
+
+</head>
+<body>
+    <h2>빅데이터반</h2>
+    <ul>
+        <li class = "java f">임경남</li>
+        <li class = "java">박병관</li>
+         <!--클래스 두개적을때는 띄어서 쓰기!-->
+        <li id = "html" class = "f">박수현</li>
+        <li id = "db">신인호</li>
+        <li>강규남</li>
+    </ul>
+    <ol>
+        <li class = "java">박병관</li>
+        <li class = "java">임경남</li> <!--클래스 두개적을때는 띄어서 쓰기!-->
+        <li id = "html" >박수현</li>
+        <li id = "db">신인호</li>
+        <li>강규남</li>
+
+    </ol>
+
+
+
+</body>
+</html>

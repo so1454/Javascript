@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 2. css 적용 */
+    a{
+        font-size :30px;
+    }
+        /*sup 태그! */
+    .s{  
+        font-size :20px;
+        display : none;         
+    }
+    /* display none으로 마우스 올리기 전까지는 sup채그가 보이지 않게 해주기*/
+
+    a:hover{
+        color :red;
+    }
+        /* 3. 마우스를 올리면 sup태그가 보이게 해주기 
+        기준선택자 계층선택자기호 변경할요소의선택자*/
+        /* a태그에 hover(마우스 올리면 반응)를 주고 그 형제인 sup태그를 데려와서
+        기능을 줄꺼임*/
+    a:hover+.s{ 
+        color :green;
+        display : inline; 
+    }
+     /* block으로 되어있으면 네이버라는 애가 가지고 차지하는 공간에
+                            sup이 못올라오니까 inline으로 해줘서 공간을 만들어줘야함*/
+    /* block은 옆에 뭐 안둠 */
+    
+
+    </style>
+
+
+</head>
+<body>
+    <!-- 1.HTML 뼈대만들기 -->
+    <!-- a태그의 역할은 : 하이퍼링크 기능
+                        : a채그의 content(내용)을 눌렀을때 href의 주소로 이동! -->
+    <a href="https://www.naver.com/" >네이버</a>
+    <sup class = "s"> https://www.naver.com/</sup><br>
+    
+    <a href="https://www.daum.net/">다음</a>
+    <sup class = "s">https://www.daum.net/</sup>
+
+
+</body>
+</html>

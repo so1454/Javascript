@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+          /* 코드 순서 우선순위 : 마지막 > 처음임! */
+        /* 요소 : active - > 클릭하면 색이 바뀌는 기능 */
+        h1:active {
+            color : blueviolet 
+        }
+        h1:hover {  /*우선순위가 더 높음 hover> active */
+            color : red;
+        }
+        /* 여기서 hover가 뒤에 있고(더 높음) active보다 더 우선순위가 높으니까
+             앞에서 선행된 active는 적용이 안됨!!! */
+        /* 둘이 순서를 바꾸면! hover랑 active 둘 다 기능을 함!! */
+
+        /*요소 : hover -> 마우스를 올렸을때 색이 바뀌는 기능 */
+        h2:hover {  
+            color : blueviolet 
+        }
+
+
+
+
+
+    </style>
+
+
+
+
+
+
+</head>
+<body>
+    <h1> 구소현</h1>
+    <h2>강규남 </h2>
+</body>
+</html>

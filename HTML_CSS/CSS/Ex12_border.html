@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:  300px; height: 300px;
+            /* 속성을 따로 적용하고 싶을때 */
+            border-style : dashed;
+            border-color : tomato;
+            border-width : 30px
+            /* 속성을 간단하게 한줄로 표현하고 싶을때 */
+            /* border : tomato dashed 30px; */
+        }
+
+        /* 동그라미 만들기(radius 실습) 한번에 주는법*/
+        #radius{
+            border: solid black 20px;
+            background-color: black;
+            border-radius: 200px;
+            border-radius: 50%;
+        }
+
+        /* 나뭇잎 모양 만들기 각자 줄 수 있다*/
+        #leaf{
+            border: solid yellowgreen 20px;
+            background-color: yellowgreen;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    <div></div>
+    <div id="radius"></div>
+    <div id = "leaf"></div>
+</body>
+</html>

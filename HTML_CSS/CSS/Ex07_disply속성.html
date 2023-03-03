@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*꼭 크기를 지정해주어야함*/  
+        div, p, span{   
+            width: 200px;
+            height:  200px;
+        }
+        /* 각 아이디마다 색을 줘봄 *//*  *//*  */
+        
+        #tomato{
+            background-color: tomato;
+            
+        }
+        #orange{
+            background-color: orange;
+            
+        }
+        #green{
+            background-color: green;
+        }
+        #blue{
+            background-color: blue;
+        }
+        #navy{
+            background-color: navy;
+        }
+        #violet{
+            background-color: violet;
+        }
+        #aqua{
+            background-color: aqua;
+            display : inline-block;
+            width : 100px; height: 100px; /*원래 inline은 너비와 높이 지정은 못하지만 inline -block
+                                            해주면 크기지정도 가능함*/
+        }
+        #gray{
+            background-color: gray;
+        }
+        #none{
+            background-color: brown;
+            display : none;  
+        }
+
+        /*  *//*  *//*  */
+        div,p{  /* 강제로 인라인 속성을 주면 글자수만큼만 크기를 차지함*/ 
+            display: inline;
+        }
+        span{ /* 강제로 블락 속성을 주면 꽉차게 만들어짐*/ 
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- display 4 가지 속성 : 화면에 보여지는 방식을 지정
+    1. block : 웹페이지의 가로 공간을 모두 차지(그래서 span(inline)처럼 옆으로 못옴)
+            : div, p, table, ul ...(그래서 div랑 p랑 서로 딱 붙어있음) 
+    2. inline : 컨텐츠(내용)만큼만 크기를 차지
+                : 너비와 높이가 적용이 안됨! ( 크기를 지정을 해줘도
+                                            글자를 가지고 있는 만큼만 크기를 가짐)
+    3. inline- block : inline + block 
+                    : 컨텐츠 만큼만 크기차지 + 너비/높이 적용 O
+    4. none : 코드에는 존재하지만, 화면에 보이지 않게 지정-->
+
+    <div id = "tomato">div</div>
+    <div id = "orange">div</div>
+    <p id = "green">p</p>
+    <p id = "blue">p</p>
+
+    <span id = "navy">span</span>
+    <span id = "violet">span</span>
+
+    <hr>
+    <span id = "aqua">span</span>
+    <span id = "gray">span</span>
+
+    <hr>
+    <div id = "none">none</div>
+</body>
+</html>

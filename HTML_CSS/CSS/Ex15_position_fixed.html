@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 맨위로 올라가기 예쁘게 만들기 */
+       /* position: fixed -> 화면을 기준으로 절대 위치 설정 */
+        #tt{
+            background-color: aquamarine;
+            position: fixed;        /*스크롤이 내려가도 항상 고정시켜줌*/
+            right: 30px;
+            bottom: 10px;
+        }
+        #mm{   /*a+a여도 된다(인접형제 불러오기)*/
+            background-color: yellowgreen;
+            position: fixed;        /*스크롤이 내려가도 항상 고정시켜줌*/
+            
+            right: 30px;
+            bottom: 50px;
+        }
+
+    </style>
+
+
+
+
+</head>
+<body>
+    <h1 id = "top">여기가 맨 윗 부분 입니다.</h1>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- 스크롤을 쭉 만들어줌(개행 50번으로) -->
+    <h1 id = "middle">여기는 중간 부분입니다.</h1>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <a id = "tt" href="#top">맨 위로 올라가기</a> <!--맨 위의 h1에 id를 주어줘서-->
+    <a id = "mm" href="#middle">중간으로 올라가기</a>
+
+
+
+
+</body>
+</html>

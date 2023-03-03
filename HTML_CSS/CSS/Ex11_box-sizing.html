@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*box-sizing : 요소의 크기를 화면에 표시하는 방법
+            - content-box : content(내용)의 크기를 지정 
+                (기본값)  : width : 200px로 지정 할 경우 content의 크기가 200px로 지정이 된다 */
+                /* 문제점 . padding이나 border에 크기가 다를경우 html요소의 모습을 상상하기 어려움 
+                그래서 우리는 border-box를 쓸꺼다
+            
+                -border-box : border + padding + content의 크기를 지정해주는 친구
+                        : width : 200px 로 지정할 경우
+                        : border + padding + content = 200px */
+        div{
+            width : 200px;  /*여기서 지정하는건 컨텐츠의 크기임! (전체크기가 아니라)*/
+            margin-bottom : 5px;
+            padding  :10px;
+            box-sizing:  border-box; 
+            /* 원래 borderbox안해주면 그냥 컨텐츠만 200인데 borderbox해주면 
+            전체 크기가 200으로 맞춰짐 */
+        }
+        #small{
+            border : 10px solid black
+            
+        }
+        #large{
+            border : 30px solid black;
+        }
+
+
+
+
+
+
+    </style>
+
+
+
+
+
+</head>
+<body>
+    <div id = "small">small</div>
+    <div id="large">large</div>
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* position : absolute 
+            -> static이 아닌 조상요소를 기준으로 해서 위치 설정
+            -> 만약, 조상이 전부 static이라면 body가 기준이 됨*/
+        #parents{
+            height: 300px;
+            border : 10px solid black;      /*테두리를 검정으로 10해주겠다.*/
+            position: relative;
+        }
+        #child{
+            height: 100px; width : 100px;
+            background-color: gold;
+            /* relative : 내 위치를 기준으로 이동 
+               absolute : 부모 요소 내에서 위치선정 */
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+
+    </style>
+
+
+
+</head>
+<body>
+    <div id="parents">
+        <div id="child"></div>
+    </div>
+
+
+</body>
+</html>

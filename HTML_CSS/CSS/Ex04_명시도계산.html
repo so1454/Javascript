@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /*명시도 우선순위
+         id = 100(id는 딱 하나니까 가장 점수가 높음!),
+                    클래스 = 10, 태그 = 1 */
+
+        /* 자식이기도하면서 자손이기도 하니까 div>p>span도 가능 
+        명시도 => 1 + 1 + 1 = 3점*/
+    div>p span{
+            color: red;
+        }
+        /* 자식이기도 하고 자손이기도 하니까 #box .my_color span도 가능 */
+    #box .my_color> span{
+        color : blue
+    }
+    /* 명시도 우선순위 더 높은 값을 가진 친구가 더 먼저 표시된다
+    여기의 경우 100 + 10 + 1 = 111점 얘가 먼저 표시된다!
+     */
+    </style>
+    
+
+</head>
+<body>
+    <div id = "box">
+        <p class = "my_color">
+            <span>구소현</span>
+
+        </p>
+    </div>
+
+</body>
+</html>
