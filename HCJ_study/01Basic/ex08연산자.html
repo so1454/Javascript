@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //  / : JS에서는 실제 나누기 연산 결과가 나옴(원래 자바나 파이썬은 몫 만 나오는데)
+
+        console.log("연산결과 :" ,100/3);
+        console.log("몫 이후 나머지 :" ,100%3);
+
+        // 몫만 나오게 하기
+        // (1) 정수로 형변환 : parseInt()
+        console.log("몫",parseInt(100/3));
+
+        // (처음 숫자 - 나머지)/ 나눌 숫자
+        console.log("몫",(100 -100 %3)/3);
+
+
+        // 비교연산자 ===  : 타입과 값을 같이 비교
+
+        let num = 5 ;
+        let str = '5';
+        console.log(num == str); // 값을 비교하니까 True
+        console.log(num === str) ;// 타입,값을 같이 비교하니까 False ()
+        console.log(num !== str); // 둘은 타입이 같지 않으니까 True
+        console.log(num == Number(str)); // 형을 바꿔주니까 True
+
+    </script>
+    
+
+
+
+
+
+
+
+    
+</body>
+</html>

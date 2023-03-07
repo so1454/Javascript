@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let height = Number(prompt('키 입력 >> '));
+        let weight = Number(prompt('몸무게 입력 >> '));
+        
+        let normal = (height - 100 )*0.9
+        
+        document.write(` 신장 : ${height}cm <br>
+            체중 : ${weight}kg <br>
+            적정 체중 : (${height} - 100)X0.9 = ${parseInt(normal)}(kg)<br>`)
+
+            // JS 절댓값 구하기 : Math.abs()
+        let gap = Math.abs(weight - normal);
+        
+        let a = ' ';
+
+        if(normal > weight){
+            a = '미달한';
+        }else if(normal < weight) {
+            a = '초과한';
+        }else{
+            a = '적정한';
+        }
+        
+        document.write(`적정체중은 ${parseInt(normal)}kg이며, 현재 적정 체중에서 ${parseInt(gap)}kg ${a} 것을 알 수 있습니다.`);
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

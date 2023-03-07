@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // 1. java, spring,web 세 과목의 점수 입력받기
+        let java = Number(prompt('자바 점수 입력 >> '));
+        let spring = Number(prompt('스프링 점수 입력 >> '));
+        let web = Number(prompt('웹 점수 입력 >> '));
+
+
+        // 2. 입력받은 점수로 총점, 평균 점수, 등급 설정하기
+        
+        console.log('총점 >> ' , java + spring + web)
+        
+        // 2-1. 평균 점수는 정수형으로 출력
+        let avg = parseInt((java + spring + web)/3)
+        console.log('평균 점수 >> ' ,avg )
+
+        // 2-2 . 등급은 평균점수가 90점 이상 A, 80 점 이상 
+        //          70점 이상 C, 60점 이상 D, 그 외 F
+        let score = ' ';
+        if (avg >= 90){
+            score = 'A';
+        }else if(avg>=  80) {
+            score = 'B';
+        }else if(avg>= 70) { 
+            score = 'C';
+        }else if (avg>=60){
+            score = 'D';
+        }else{
+            score = 'F';
+        }
+        
+        // 
+// 3. 결과값 출력 -> 콘솔창
+        //      당신의 평균은 00점 이고 당신의 등급은 X등급 입니다
+        console.log(`당신의 평균은 ${avg} 점이고 당신의 등급은 ${score} 등급 입니다.`)
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
