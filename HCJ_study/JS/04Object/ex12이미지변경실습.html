@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://i.ytimg.com/vi/5ZWFtpM2whI/maxresdefault.jpg" width = "300px" alt="">
+    <br>
+    <button onclick = "changeImg()">이미지 변경</button>
+
+    <script>
+        let src1 = "https://i.ytimg.com/vi/5ZWFtpM2whI/maxresdefault.jpg"
+        let src2 = "https://i.ytimg.com/vi/zHL82z9MHbM/maxresdefault.jpg"
+        const changeImg = () =>{
+            //이미지 요소를 가져오기
+            let img = document.querySelector('img');
+            // let img = document.querySelectorAll('img')[0];  여러개의 사진인 경우 인덱스로 가져오기 가능
+
+
+            //이미지 변경하기
+            // img.src = src2 
+
+            if (img.src == src1) {
+                img.src = src2;
+
+            }else {
+                img.src = src1;
+            }
+
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

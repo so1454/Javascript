@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id = "num">0</p>
+    <button id = "btn-plus" >증가</button>
+    <button id = "btn-minus" >감소</button>
+    
+
+    <script>
+    // 문제. 버튼을 눌렀을때, 웹페이지의 숫자가 변하는 로직
+    // 조건. 감소 버튼을 클릭했을 때, 음수가 나오지 않도록! 
+
+    // 1. HTML 태그에 접근(p, button)
+    // 2. 각 버튼에 이벤트를 정한다.
+    // 3. 결과값을 p태그에 출력하게 한다.
+    // const -> 변하지 않아도 되는 값
+    const num = document.getElementById("num");
+
+    const btnPlus = document.getElementById("btn-plus"); 
+    const btnMinus = document.getElementById("btn-minus"); 
+
+
+    // 화면에 표시할 수 있는 또다른 방법!(쌤이 알려주신 부분)
+    // const plusNumber = function(){
+    //     let n = Number(num.textContent);
+    //     n += 1;
+    //     num.textContent = n;
+        
+    // }
+    // btnPlus.addEventListener("click",plusNumber); --> 정의를 해두면 다른 곳에서 유용하게 쓰기가넝~!~
+
+
+    btnPlus.addEventListener("click", function(){
+
+        let n = Number(num.textContent);
+        n += 1; // 자바스크립테에서 만든걸 다시 태그 안에 넣어줘야함
+        num.textContent = n;
+        console.log(n);
+
+        n.textContent  // 요렇게 해주면 콘솔이 아니라 직접 화면에 표시된다
+
+    })
+    btnMinus.addEventListener("click", function(){
+
+        let m = Number(num.textContent);
+        if (m>0){ //음수로는 내려가지 않게 해주는 조건
+            m -= 1;
+        }
+        
+        //m -= 1; // 자바스크립트에서 만든걸 다시 태그 안에 넣어줘야함
+        num.textContent = m;
+        console.log(m);
+
+        m.textContent
+
+    })
+
+
+    </script>
+</body>
+</html>

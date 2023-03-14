@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id = "inputTag">
+    <button onclick="ckfunc()">Click!</button>
+
+    <script>
+        const ckfunc = () => {
+            // 1. input 입력값을 가져오기
+            let i = document.getElementById('inputTag');
+
+            alert(i.value); // input같은 경우는 text가 아니라 value로 가져와야해!
+
+        }
+
+
+    </script>
+
+
+
+
+
+
+
+</body>
+</html>

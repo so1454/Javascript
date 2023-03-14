@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <button class = "btn">클릭!</button>
+    <script>
+        // 콜백함수
+        // 어떤 이벤트가 발생하거나, 특정 시점에 도달했을 때
+        // 시스템에서 호출하는 함수
+        // 함수 안의 함수 -> 함수에 매개변수로 들어가는 함수
+
+         // 1. 이벤트 핸들러
+        document.querySelector('.btn').addEventListener('click', ()=>{
+            console.log('🍕');
+        })
+
+        // 2. 타임 핸들러
+        console.log('🍟');
+        console.log('🍔');
+        setTimeout(()=>{
+            console.log('🍿');
+        },2500);
+
+
+    </script>
+
+
+
+
+</body>
+</html>
