@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id = "div1">
+        <div id = "div2">나는 div2</div>
+        <div id = "div3">나는 div3</div>
+        <div id = "div4">나는 div4</div>
+
+    </div>
+
+    <!-- 텍스트 바꾸기 실습 -->
+    <h1 id = 'msg'>조금만 버티면 집에 가요!</h1>
+
+    <!-- 추가 버튼을 누르면 table이 늘어나는 것 실습 해볼것임 -->
+    <button id = 'btn'>추가</button>  
+    <table border = "1">
+        <tr id = 'tb'>
+            <td> 클릭 이벤트 </td>
+            <td> 발생!! </td>
+        </tr>
+    </table>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+    crossorigin="anonymous"></script>
+
+    <!-- 이 위에 있는 스크립트 아래에 우리가 작성하는 것을 넣어줘야 jquery가 먹힘! -->
+
+    <script> 
+        // 1. 자식요소 가져오는 방법
+        console.log($('#div1').children('div'));       //div1이라는 아이디 안에 div태그를 가진 자식요소가 필요해
+        
+        // 2. 부모요소 가져오는 방법
+        console.log($('#div2').parents('div'));  //div2라는 아이의 부모요소를 가져오겠다.
+
+        // 3. 이전 요소들을 가져오는 방법
+        console.log($('#div4').prevAll());   
+
+        // 4. 다음 요소들을 가져오는 방법
+        console.log($('#div2').nextAll());
+
+        // 코드/ 텍스트 가져오기
+        // 1. .html() : 선택한 요소 안의 내용을 가져온다 (태그 포함)
+        // 2. .text() : 선택한 요소 안의 내용을 가져온다 (태그 미포함)
+        console.log($('#msg').html());
+        console.log($('#msg').text());
+
+        console.log($('#div1').html()); // html 전 문이 나옴
+        console.log($('#div1').text());
+
+        // 텍스트 바꿀 수도 있음
+        // $('#msg').text('20분 남았어요 화이팅🎈');
+        // $('#msg').text('<span>춥다</span>');  // text 자체로 나옴
+        $('#msg').html('<span>20분 남았어요 화이팅🎈</span>');      // html이 적용이 되어서 나옴
+
+        $('h1').after('<p>안녕! </p>');
+        
+        $('#btn').on('click', function() {
+            let text = `<tr>
+                            <td> 클릭 이벤트 </td>
+                            <td> 발생!! </td>
+                        </tr>`;
+            $('#tb').parent().append(text);     // 여기서 tb가 tr이니까 tr의 부모요소면 tbody
+                                                // 누를때마다 추가를 해주겠다.
+            // 얘로 해도됨 $('#tb').after('')
+        })
+
+
+
+    </script>
+
+
+
+</body>
+</html>

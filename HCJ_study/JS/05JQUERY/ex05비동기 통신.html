@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        // 동기 방식
+        console.log("동기 방식");
+        console.log("첫번째");
+        console.log("두번째");
+        console.log("세번째");
+        
+
+        console.log("비동기 방식");
+        // 비동기방식
+        // 동시에 여러 요청을 보낼 수 있다.(시간적 비용 절감 가능)
+        // 비동기통신을 자스로 구현하기 위해서 : ajax 사용
+        // ajax : 서버를 비동기 방식으로 처리하는 기술
+        // ajax 특징
+        // 서버 처리를 기다리지 않고 비동기 요청이 가능하다(페이지 새로고침X)
+        // 서버로부터 데이터를 받고 작업을 수행 
+        // 다른 도메인과는 통신이 불가능(동일 출처 정책)
+        console.log("첫번째");
+        setTimeout(function() {   // settimeout이라는 함수! 
+            console.log("두번째")   // 얘가 1000m/s 뒤에 해달라는 조건이 붙어서 뒤에 나오는 세번째보다 늦게나옴
+
+        }),1000; // 1000m/s(1초) 뒤에 해줘를 부탁하는 부분
+
+        console.log("세번째")       // 얘가 앞에 두번째 보다 먼저나옴
+
+    </script>
+</body>
+</html>

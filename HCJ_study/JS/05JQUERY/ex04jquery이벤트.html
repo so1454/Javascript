@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- 항상 jquery 속성 먼저 가져와주기! -->
+    <script src = "/Javascript/jquery-3.6.4.min.js"></script>
+
+    <script>
+        // keydown 키보드 키를 눌렀을때(여기서 콘솔열어서 keycode 확인하면 숫자가 나오는데 키보드를 뭘 눌렀는지 알 수 있음)
+        $('body').on('keydown',function(event) {
+            console.log(event) // 이렇게만하면 콘솔에 keydown으로 얻을 수 있고, 그 안에 가지고 있는 속성이 다나옴      
+            console.log(event.keyCode)    // 이렇게하면 키코드를 가지고 올 수 있음  
+
+
+        })
+
+        
+
+
+    </script>
+
+</body>
+</html>

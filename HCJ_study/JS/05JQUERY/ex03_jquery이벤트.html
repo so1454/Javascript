@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            
+
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="box1">
+        클릭
+    </div>
+
+
+    <script src="/Javascript/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        // 이벤트 처리 (.on)
+        $('div').on('click', () => {    // 원래 div는 클릭이 안되는 태그인데, on안에 click이라는 것을 넣으면 색깔과 크기가 바뀜!
+            //div 태그의 너비 200px , 높이 200px, 배경색은 파랑으로 변경
+                
+            $('div').removeClass().addClass('box2')     // div라는 클래스를 지우고, box2라는 클래스로 바꿔줄꺼야!
+
+        } )
+
+    </script>
+
+
+</body>
+
+</html>

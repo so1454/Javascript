@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <h1 id="j">jQuery Click!</h1>
+        <script src="/Javascript/jquery-3.6.4.min.js"></script>
+
+    <script>
+
+        $('body').on('dbclick', function() {    // 원래 div는 클릭이 안되는 태그인데, on안에 click이라는 것을 넣으면 색깔과 크기가 바뀜!
+
+            $('*').css({
+                'background-color': 'pink',
+                'color': 'white',
+                'text-align':'center'
+            })
+        })
+        
+
+    </script>
+
+
+</body>
+
+</html>
